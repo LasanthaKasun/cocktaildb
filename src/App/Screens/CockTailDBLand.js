@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import {
-  addFavoriteItemAction,
+  addFavouriteItemAction,
   getCocktailsAction,
   searchCocktailsAction,
 } from "../Actions/cocktailAction";
@@ -23,7 +23,7 @@ const CockTailDBLand = () => {
 
   const [filter, setFilter] = useState("");
 
-  const { list, loading, favorite } = useSelector(
+  const { list, loading, favourite } = useSelector(
     (state) => state.cocktailData
   );
 
@@ -37,21 +37,26 @@ const CockTailDBLand = () => {
   };
 
   const searchCocktailItems = () => {
-    dispatch(
-      searchCocktailsAction({
-        value: filter,
-      })
-    );
+    if(filter !== ""){
+      dispatch(
+        searchCocktailsAction({
+          value: filter,
+        })
+      );
+    }else {
+      toast.error("Please type your search key")
+    }
+    
   };
 
-  const addFavoriteItem = (data) => {
-    const isExist = favorite.filter((x) => x.idDrink === data.idDrink).length;
+  const addFavouriteItem = (data) => {
+    const isExist = favourite.filter((x) => x.idDrink === data.idDrink).length;
     if (isExist === 0) {
-      dispatch(addFavoriteItemAction(data));
+      dispatch(addFavouriteItemAction(data));
     } else {
       toast.error(
         data.strDrink +
-          " cocktail already in your favorite list, please try antother one"
+          " cocktail already in your favourite list, please try antother one"
       );
     }
   };
@@ -60,7 +65,7 @@ const CockTailDBLand = () => {
     <>
       {loading && <LoadingSpinner />}
       <NavBar title="AMUSED GROUP ASSIGNMENT" />
-      <SlideBar data={SLIDE_MENU} count={favorite.length} />
+      <SlideBar data={SLIDE_MENU} count={favourite.length} />
       <div className="content ml-12 transform ease-in-out duration-500 pt-20 px-2 md:px-5 pb-4 ">
         <div className="pb-4 flex justify-between gap-5">
           <Search
@@ -77,12 +82,12 @@ const CockTailDBLand = () => {
             onPress={() => getCocktailItems()}
           />
         </div>
-        <div class="grid grid-cols-5 gap-5">
+        <div className="grid grid-cols-5 gap-5">
           {list.map((item, index) => (
             <ProductCard
               data={item}
               key={index}
-              handleFavorite={() => addFavoriteItem(item)}
+              handleFavourite={() => addFavouriteItem(item)}
               add={true}
             />
           ))}

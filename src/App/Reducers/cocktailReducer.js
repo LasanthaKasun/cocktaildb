@@ -1,10 +1,10 @@
 /* eslint-disable import/no-anonymous-default-export */
 import {
-  ADD_FAVORITE_COCKTAILS_REQUEST,
+  ADD_FAVOURITE_COCKTAILS_REQUEST,
   GET_COCKTAILS_FAILED,
   GET_COCKTAILS_REQUEST,
   GET_COCKTAILS_SUCCESS,
-  REMOVE_FAVORITE_COCKTAILS_REQUEST,
+  REMOVE_FAVOURITE_COCKTAILS_REQUEST,
   SEARCH_COCKTAILS_FAILED,
   SEARCH_COCKTAILS_REQUEST,
   SEARCH_COCKTAILS_SUCCESS,
@@ -12,7 +12,7 @@ import {
 
 const initialState = {
   list: [],
-  favorite: [],
+  favourite: [],
   loading: false,
 };
 
@@ -57,16 +57,16 @@ export default (state = initialState, action) => {
         loading: false,
       };
     }
-    case ADD_FAVORITE_COCKTAILS_REQUEST: {
+    case ADD_FAVOURITE_COCKTAILS_REQUEST: {
       return {
         ...state,
-        favorite: [...state.favorite, action.payload],
+        favourite: [...state.favourite, action.payload],
       };
     }
-    case REMOVE_FAVORITE_COCKTAILS_REQUEST: {
+    case REMOVE_FAVOURITE_COCKTAILS_REQUEST: {
       return {
         ...state,
-        favorite: state.favorite.filter((x) => x.idDrink !== action.payload),
+        favourite: state.favourite.filter((x) => x.idDrink !== action.payload),
       };
     }
     default:

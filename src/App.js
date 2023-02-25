@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CockTailDBLand from "./App/Screens/CockTailDBLand";
-import FavoriteList from "./App/Screens/FavoriteList";
+import FavouriteList from "./App/Screens/FavouriteList";
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
         <Route path="/" element={<CockTailDBLand/>} />
       </Routes>
       <Routes>
-        <Route path="/favorite" element={<FavoriteList/>} />
+        <Route path="/favourite" element={<FavouriteList/>} />
       </Routes>
     </BrowserRouter>
   );

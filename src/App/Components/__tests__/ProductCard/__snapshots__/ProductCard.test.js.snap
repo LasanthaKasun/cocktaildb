@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render button component 1`] = `
+<div
+  className="max-w-sm max-  border rounded-lg shadow bg-gray-800 border-gray-700 relative"
+  data-testid="productCard"
+>
+  <div
+    className="absolute bg-white rounded-full p-2 right-2 top-2 cursor-pointer hover:bg-yellow-400 duration-500 flex gap-2"
+    onClick={null}
+    title="Add to favourite"
+  >
+    <img
+      alt="add/remove"
+      src="favourite_red.png"
+      width="25"
+    />
+    <span
+      className="font-semibold"
+      data-testid="productCardButton"
+    >
+      ADD
+    </span>
+  </div>
+  <img
+    alt=""
+    className="rounded-t-lg"
+    src=""
+  />
+  <div
+    className="p-5"
+  >
+    <h5
+      className="mb-2 text-2xl font-bold tracking-tight text-white"
+    />
+    <h3
+      className="mb-2 text-md font-bold tracking-tight text-gray-200"
+    />
+    <p
+      className="mb-3 font-normal text-gray-400"
+    />
+  </div>
+</div>
+`;

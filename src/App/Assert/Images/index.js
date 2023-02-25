@@ -1,9 +1,9 @@
 import home from "./home.png";
-import favorite from "./favorite.png";
+import favourite from "./favourite.png";
 import logo from "./logo.jpg";
 import refresh from "./refresh.png";
 import search from "./search.png";
-import favoriteRed from "./favorite_red.png";
+import favouriteRed from "./favourite_red.png";
 import remove from "./remove.png";
 
-export { home, favorite, logo, refresh, search, favoriteRed, remove };
+export { home, favourite, logo, refresh, search, favouriteRed, remove };

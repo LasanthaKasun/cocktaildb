@@ -3,11 +3,11 @@ import { getRendomItems } from "../Helper";
 import { instance } from "../Rest";
 import { get_all_cocktail } from "../Rest/apis";
 import {
-  ADD_FAVORITE_COCKTAILS_REQUEST,
+  ADD_FAVOURITE_COCKTAILS_REQUEST,
   GET_COCKTAILS_FAILED,
   GET_COCKTAILS_REQUEST,
   GET_COCKTAILS_SUCCESS,
-  REMOVE_FAVORITE_COCKTAILS_REQUEST,
+  REMOVE_FAVOURITE_COCKTAILS_REQUEST,
   SEARCH_COCKTAILS_FAILED,
   SEARCH_COCKTAILS_REQUEST,
   SEARCH_COCKTAILS_SUCCESS,
@@ -56,12 +56,12 @@ export const searchCocktailsAction = (payload) => async (dispatch) => {
   }
 };
 
-export const addFavoriteItemAction = (payload) => async (dispatch) => {
-  dispatch({ type: ADD_FAVORITE_COCKTAILS_REQUEST, payload });
+export const addFavouriteItemAction = (payload) => async (dispatch) => {
+  dispatch({ type: ADD_FAVOURITE_COCKTAILS_REQUEST, payload });
   toast.success("Item added successfully");
 };
 
-export const removeFavoriteItemAction = (payload) => async (dispatch) => {
-  dispatch({ type: REMOVE_FAVORITE_COCKTAILS_REQUEST, payload });
+export const removeFavouriteItemAction = (payload) => async (dispatch) => {
+  dispatch({ type: REMOVE_FAVOURITE_COCKTAILS_REQUEST, payload });
   toast.warn("Item deleted successfully");
 };

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render button component 1`] = `
+<button
+  className="bg-blue-300 hover:bg-blue-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center gap-2"
+  data-testid="actionBtn"
+>
+  <img
+    alt="refresh"
+    width="25"
+  />
+  <span />
+</button>
+`;

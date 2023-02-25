@@ -1,4 +1,4 @@
-import { favorite, home } from "../Assert/Images";
+import { favourite, home } from "../Assert/Images";
 
 export const SLIDE_MENU = [
     {
@@ -9,8 +9,8 @@ export const SLIDE_MENU = [
     },
     {
         id: 2,
-        icon: favorite,
-        path: "/favorite",
+        icon: favourite,
+        path: "/favourite",
         tag: true,
     }
 ]
