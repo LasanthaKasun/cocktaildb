@@ -22,7 +22,7 @@ const FavouriteList = () => {
         <div className="pb-4 flex justify-between gap-5">
           <h1 className="font-bold text-4xl uppercase">My Favourite Cocktail List</h1>
         </div>
-        <div className="grid grid-cols-5 gap-5">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 gap-5">
           {favourite.map((item, index) => (
             <ProductCard
               data={item}

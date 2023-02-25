@@ -14,7 +14,7 @@ const ProductCard = ({ data, handleFavourite, add }) => {
         onClick={handleFavourite}
       >
         <img width="25" src={add ? favouriteRed : remove} alt="add/remove" />
-        <span className="font-semibold" data-testid="productCardButton">
+        <span className="font-semibold sm:hidden md:visible lg:visible" data-testid="productCardButton">
           {add ? "ADD" : "REMOVE"}
         </span>
       </div>

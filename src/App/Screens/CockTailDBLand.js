@@ -82,7 +82,7 @@ const CockTailDBLand = () => {
             onPress={() => getCocktailItems()}
           />
         </div>
-        <div className="grid grid-cols-5 gap-5">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 gap-5">
           {list.map((item, index) => (
             <ProductCard
               data={item}
